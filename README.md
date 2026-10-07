@@ -1,6 +1,8 @@
 
 # QorannooDhugaa
 
+[![CI](https://github.com/Surra1960/qorannoo-dhugaa/actions/workflows/ci.yml/badge.svg)](https://github.com/Surra1960/qorannoo-dhugaa/actions/workflows/ci.yml)
+
 ## What is QorannooDhugaa?
 
 QorannooDhugaa is an open-source research platform for collecting survey data in the field across Africa. It uses voice and face matching to detect duplicate or fraudulent submissions, without storing names or ID numbers with survey answers. It also gives non-literate respondents an audio-first interface in their own language.
