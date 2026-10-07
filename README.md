@@ -31,3 +31,7 @@ In development, Phase 0.
 ## How to self-host
 
 Coming soon.
+
+## Team
+
+Isaak Alemu: voice and face models, accuracy evaluation, AI analysis layer.
