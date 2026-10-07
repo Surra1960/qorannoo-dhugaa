@@ -1,19 +1,17 @@
 {
-  "name": "api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-  "dev": "tsx watch src/server.ts",
-  "build": "tsc",
-  "test": "vitest run",
-  "lint": "eslint .",
-  "typecheck": "tsc --noEmit"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "@qorannoo-dhugaa/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Backend API for QorannooDhugaa",
+  "license": "AGPL-3.0-only",
   "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "express": "^5.2.1"
   },
