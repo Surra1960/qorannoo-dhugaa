@@ -1,13 +1,12 @@
+import request from 'supertest';
+import { describe, expect, it } from 'vitest';
+import { app } from './app.js';
 
-import request from "supertest";
-import { describe, expect, it } from "vitest";
-import { app } from "./app.js";
-
-describe("GET /health", () => {
+describe('GET /health', () => {
   it("returns status 200 and { status: 'ok' }", async () => {
-    const response = await request(app).get("/health");
+    const response = await request(app).get('/health');
 
     expect(response.status).toBe(200);
-    expect(response.body).toEqual({ status: "ok" });
+    expect(response.body).toEqual({ status: 'ok' });
   });
 });
