@@ -32,6 +32,52 @@ In development, Phase 0.
 
 Coming soon.
 
+## Run the database
+
+The project uses PostgreSQL with the pgvector extension, run by Docker Compose. You need [Docker Desktop](https://www.docker.com/products/docker-desktop/) running.
+
+1. Copy the example settings and set your own password in `.env` (this file is git-ignored and must never be committed):
+
+```
+   copy .env.example .env
+```
+
+   On macOS or Linux use `cp .env.example .env`.
+
+2. Start the database:
+
+```
+   docker compose up -d
+```
+
+3. Check that it works. The status should say `healthy`:
+
+```
+   docker compose ps
+```
+
+   Then check that the `vector` extension is installed (Windows cmd):
+
+```
+   docker compose exec db sh -c "psql -U $POSTGRES_USER -d $POSTGRES_DB -c 'SELECT extname, extversion FROM pg_extension;'"
+```
+
+   On macOS or Linux, swap the quotes: use single quotes around the `sh -c` part and double quotes inside it.
+
+4. Stop (data is kept):
+
+```
+   docker compose down
+```
+
+5. Reset (deletes all database data):
+
+```
+   docker compose down -v
+```
+
+The database listens on `127.0.0.1:15432` only, so it is not reachable from the network. To connect with a tool such as pgAdmin, use host `127.0.0.1`, port `15432`, and the user, password and database name from your `.env`.
+
 ## Team
 
 Isaak Alemu: voice and face models, accuracy evaluation, AI analysis layer.
